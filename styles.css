@@ -1,4 +1,391 @@
-body{
-   background-color: #000066;
-   color: #ffffff;
+html {
+   overflow-x: hidden;
+}
+
+body {
+   background-color: #fff;
+   background-image: url(https://c4arena.com/assets/background.png);
+   color: #08a;
+   font-family: open sans,sans-serif;
+   margin: 0;
+}
+
+div {
+   display: block;
+}
+
+.reverse {
+   display: inline-block;
+   left: 0;
+   position: relative;
+   -webkit-transition: left .2s;
+   transition: left .2s;
+}
+
+#navigation:hover .reverse {
+    left: 7px;
+}
+
+iframe {
+   border: none;
+   border-bottom: 1px solid #dddddd;
+   /*border: 1px solid #dddddd;*/
+   /*border-top: none;*/
+   box-sizing: border-box;
+   display: block;
+   /*height: 100%;*/
+   margin: 0 auto;
+   /*max-height: 550px;*/
+   /*max-width: 800px;*/
+   /*width: 100%;*/
+}
+
+p, h2, #games {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 500px;
+}
+
+#helper-div {
+   height: 100%;
+   position: absolute;
+   width: 100%;
+}
+
+#wrap-iframe {
+   height: 100%;
+   overflow-x: hidden;
+   overflow-y: auto;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+#description {
+   padding: 0 10px 10px 10px;
+   position: relative;
+}
+
+.game {
+   background-color: #fdfdfd;
+   border: 1px solid #dddddd;
+   box-sizing: border-box;
+   color: #666666;
+   display: block;
+   margin: 5px auto;
+   overflow: auto;
+   padding: 5px;
+   text-decoration: none;
+}
+
+.game:hover {
+   background-color: #ffffff;
+   border-color: #aaaaaa;
+   color: #333333;
+}
+
+.game img {
+   border: 1px solid #dddddd;
+   box-sizing: border-box;
+   float: left;
+   height: auto;
+   margin-right: 5px;
+   width: 100px;
+}
+
+
+#resize-fixer {
+   height: 100%;
+   overflow-x: hidden;
+   position: absolute;
+   width: 100%;
+}
+
+#board {
+ -webkit-tap-highlight-color:transparent;
+ background-image:url(https://c4arena.com/assets/board.svg);
+ height:330px;
+ position:absolute;
+ width:400px
+}
+
+#ingame-ad {
+   box-sizing: border-box;
+   height: 600px;
+   max-height: 100%;
+   overflow: hidden;
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 160px;
+}
+
+#social-bar {
+    box-sizing: border-box;
+    height: 32px;
+    overflow: hidden;
+    padding-top: 5px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+#navigation {
+   padding-top: 10px;
+}
+
+elemento {
+    top: 144px;
+}
+
+#screens {
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+    width: calc(100% - 20px);
+}
+
+.lock-width {
+    max-width: 400px;
+}
+
+.screen {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.screen-background-noedge {
+    background-color: #fff;
+    box-shadow: 0 0 20px 20px #fff;
+    margin: 0 auto;
+}
+
+#game-board-container {
+    position: relative;
+    width: 100%;
+}
+
+#game-board {
+    -webkit-tap-highlight-color: transparent;
+    height: 330px;
+    position: relative;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 400px;
+}
+
+#discs {
+    position: absolute;
+}
+
+.disc.disc-appear {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.disc-row-5 {
+    top: 255px;
+}
+
+.disc-col-0 {
+    left: 25px;
+}
+
+.disc {
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    height: 40px;
+    padding: 5px;
+    position: absolute;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: top;
+    transition-property: top;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    width: 40px;
+}
+
+.disc-row-start {
+    top: -55px;
+}
+
+#board-columns.enabled {
+    display: block;
+}
+
+#board-columns {
+    box-sizing: border-box;
+    height: 310px;
+    margin: 0 25px 20px;
+    position: absolute;
+    width: 350px;
+}
+
+#board-columns.enabled .board-column {
+    cursor: pointer;
+}
+
+#board-columns.enabled > .board-column.highlight-column {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#board-column-0 {
+    left: 0%;
+}
+
+#board-column-1 {
+    left: 14.28571%;
+}
+
+#board-column-2 {
+    left: 28.57143%;
+}
+
+#board-column-3 {
+    left: 42.85714%;
+}
+
+#board-column-4 {
+    left: 57.14286%;
+}
+
+#board-column-5 {
+    left: 71.42857%;
+}
+
+#board-column-6 {
+    left: 85.71429%;
+}
+
+.board-column {
+    background-image: url(https://c4arena.com/assets/column-highlight.svg);
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: calc(100%/7);
+}
+
+#game-info {
+    height: 32px;
+    margin-top: 10px;
+    position: relative;
+}
+
+#player-field-you {
+    left: 0;
+}
+
+#player-field-you, #player-field-opponent {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: calc(50% - 32px);
+}
+
+#small-disc-you {
+    float: left;
+}
+
+#small-disc-you, #small-disc-opponent {
+    background-size: 100% 100%;
+    height: 32px;
+    width: 32px;
+}
+
+#name-you {
+    left: 32px;
+    -webkit-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+
+#name-you, #name-opponent {
+    line-height: 32px;
+    padding: 0 5px;
+    position: absolute;
+}
+
+#player-field-opponent {
+    right: 0;
+}
+
+#small-disc-opponent {
+    float: right;
+}
+
+#name-opponent {
+    right: 32px;
+    -webkit-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+
+#turn-arrow-container {
+    -webkit-perspective: 100px;
+    perspective: 100px;
+    pointer-events: none;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+#turn-arrow {
+    height: 32px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transition: -webkit-transform .5s;
+    transition: transform .5s;
+    width: 64px;
+}
+
+.turn-left {
+    -webkit-transform: rotateY(0deg) !important;
+    transform: rotateY(0deg) !important;
+}
+
+#turn-arrow-you, #turn-arrow-opponent {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: rgba(0,0,0,.6);
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+#turn-arrow-you {
+    -webkit-transform: rotateY(0deg) translateZ(1px);
+    transform: rotateY(0deg) translateZ(1px);
+}
+
+#arrow-text-go {
+    font-size: 75%;
+}
+
+#embed {
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid #08a;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 79%;
+    padding: 0 4px;
+    position: relative;
+    top: -5px;
 }
