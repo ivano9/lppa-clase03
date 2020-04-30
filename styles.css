@@ -159,6 +159,7 @@ elemento {
     background-color: #fff;
     box-shadow: 0 0 20px 20px #fff;
     margin: 0 auto;
+    position: fixed;
 }
 
 #game-board-container {
@@ -386,6 +387,7 @@ elemento {
     cursor: pointer;
     font-size: 79%;
     padding: 0 4px;
-    position: relative;
-    top: -5px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1%;
 }

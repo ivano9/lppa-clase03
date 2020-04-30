@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-      <title>Play c4arena - Four-in-a-Row online multiplayer game</title>
-      <script src="https://kit.fontawesome.com/0aa563db9b.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="styles.css">
-   </head>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+   <title>Play c4arena - Four-in-a-Row online multiplayer game</title>
+   <script src="https://kit.fontawesome.com/0aa563db9b.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="styles.css">
+</head>
 
-   <body>
-      <div id="resize-fixer">
-         <div>
-            <div id="ios-statusbar" class=""></div>
-            <div id="navigation" class="height-exclude">
-               <div id="back" class="">
-                  <i class="fas fa-arrow-left"></i>
-                  <div class="reverse">Back</div>
-               </div>
+<body>
+   <div id="resize-fixer">
+      <div>
+         <div id="ios-statusbar" class=""></div>
+         <div id="navigation" class="height-exclude">
+            <div id="back" class="">
+               <i class="fas fa-arrow-left"></i>
+               <div class="reverse">Back</div>
             </div>
          </div>
-         <div id="ingame-ad"></div>
-         <div id="content">
-            <div id="screens" class="lock-with" style="top: 440px;">
-               <div id="screen-game" class="screen" style="padding: 0px;">
-                  <div class="screen-background-noedge">
-                     <div id="game-board-container" style="height: 330px;width: 400px;">
-                        <div id="game-board" style="transform: scale(1);">
-                           <div id="discs">
-                              <div class="disc disc-appear disc-col-0 disc-row-5" style="transition-duration: 434ms; background-image: url(https://c4arena.com/assets/disc-1.svg);"></div>
-                              <div class="disc disc-row-start"></div>
+      </div>
+      <div id="ingame-ad"></div>
+      <div id="content">
+         <div id="screens" class="lock-with" style="top: 440px;">
+            <div id="screen-game" class="screen" style="padding: 0px;">
+               <div class="screen-background-noedge">
+                  <div id="game-board-container" style="height: 330px;width: 400px;">
+                     <div id="game-board" style="transform: scale(1);">
+                        <div id="discs">
+                           <div class="disc disc-appear disc-col-0 disc-row-5"
+                              style="transition-duration: 434ms; background-image: url(https://c4arena.com/assets/disc-1.svg);">
                            </div>
-                           <div id="board"></div>
-                           <div id="board-columns" class="enabled" style="cursor: default;">
-                              <div id="board-column-0" class="board-column"></div>
-                              <div id="board-column-1" class="board-column"></div>
-                              <div id="board-column-2" class="board-column"></div>
-                              <div id="board-column-3" class="board-column"></div>
-                              <div id="board-column-4" class="board-column"></div>
-                              <div id="board-column-5" class="board-column"></div>
-                              <div id="board-column-6" class="board-column"></div>
-                           </div>
+                           <div class="disc disc-row-start"></div>
+                        </div>
+                        <div id="board"></div>
+                        <div id="board-columns" class="enabled" style="cursor: default;">
+                           <div id="board-column-0" class="board-column"></div>
+                           <div id="board-column-1" class="board-column"></div>
+                           <div id="board-column-2" class="board-column"></div>
+                           <div id="board-column-3" class="board-column"></div>
+                           <div id="board-column-4" class="board-column"></div>
+                           <div id="board-column-5" class="board-column"></div>
+                           <div id="board-column-6" class="board-column"></div>
                         </div>
                      </div>
-                     <div id="game-info">
-                        <div id="info-messages"></div>
-                        <div id="player-field-you">
-                           <div id="small-disc-you" style="background-image: url(https://c4arena.com/assets/disc-0.svg);"></div>
-                           <div id="name-you" style="transform: scale(1);">You</div>
-                        </div>
-                        <div id="player-field-opponent">
-                           <div id="small-disc-opponent" style="background-image: url(https://c4arena.com/assets/disc-1.svg);"></div>
-                           <div id="name-opponent" style="transform: scale(1);">AI (Easy)</div>
-                        </div>
-                        <div id="turn-field">
-                           <div id="turn-arrow-container" class="show-arrow">
-                              <div id="turn-arrow" class="turn-left">
-                                 <div id="turn-arrow-you" style="background-image: url(https://c4arena.com/assets/turn-arrow-0.svg);">
-                                    <div id="turn-arrow-text-you">
-                                       <div id="arrow-text-go">GO!</div>
-                                    </div>
+                  </div>
+                  <div id="game-info">
+                     <div id="info-messages"></div>
+                     <div id="player-field-you">
+                        <div id="small-disc-you"
+                           style="background-image: url(https://c4arena.com/assets/disc-0.svg);"></div>
+                        <div id="name-you" style="transform: scale(1);">You</div>
+                     </div>
+                     <div id="player-field-opponent">
+                        <div id="small-disc-opponent"
+                           style="background-image: url(https://c4arena.com/assets/disc-1.svg);"></div>
+                        <div id="name-opponent" style="transform: scale(1);">AI (Easy)</div>
+                     </div>
+                     <div id="turn-field">
+                        <div id="turn-arrow-container" class="show-arrow">
+                           <div id="turn-arrow" class="turn-left">
+                              <div id="turn-arrow-you"
+                                 style="background-image: url(https://c4arena.com/assets/turn-arrow-0.svg);">
+                                 <div id="turn-arrow-text-you">
+                                    <div id="arrow-text-go">GO!</div>
                                  </div>
-                                 <div id="turn-arrow-opponent" style="background-image: url(https://c4arena.com/assets/turn-arrow-1.svg);">
-                                    <div id="turn-arrow-text-opponent">
-                                       <div id="arrow-text-go">GO!</div>
-                                    </div>
+                              </div>
+                              <div id="turn-arrow-opponent"
+                                 style="background-image: url(https://c4arena.com/assets/turn-arrow-1.svg);">
+                                 <div id="turn-arrow-text-opponent">
+                                    <div id="arrow-text-go">GO!</div>
                                  </div>
                               </div>
                            </div>
@@ -73,12 +78,12 @@
                </div>
             </div>
          </div>
-         <div id="social-bar" class="height-exclude" style="top: 
-         1250px;">
-            <div class="fb-like" data-layout="button" data-with="450" data-show-faces="false" data-href="https://www.facebook.com/c4arena" data-share="false" style="top: -5px;"></div>
-            <div id="embed">Embed</div>
-         </div>
       </div>
-   </body>
-
+      <div id="social-bar" class="height-exclude";">
+         <div class="fb-like" data-layout="button" data-with="450" data-show-faces="false"
+            data-href="https://www.facebook.com/c4arena" data-share="false" style="top: -5px;"></div>
+         <div id="embed">Embed</div>
+      </div>
+   </div>
+</body>
 </html>
